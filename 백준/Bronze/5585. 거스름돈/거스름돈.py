@@ -1,24 +1,9 @@
 money = 1000 - int(input())
+coins = [500, 100, 50, 10, 5]
+cnt = 0
 
-coin = 0
-while money > 0:
-    if money >= 500:
-        coin += money // 500
-        money = money % 500
-    elif money >= 100:
-        coin += money // 100
-        money = money % 100
-    elif money >= 50:
-        coin += money // 50
-        money = money % 50
-    elif money >= 10:
-        coin += money // 10
-        money = money % 10
-    elif money >= 5:
-        coin += money // 5
-        money = money % 5
-    else:
-        coin += money
-        break
+for coin in coins:
+    cnt += money // coin
+    money = money % coin
     
-print(coin)
+print(cnt + money)
