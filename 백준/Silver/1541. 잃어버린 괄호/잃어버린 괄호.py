@@ -1,9 +1,6 @@
 expression = input().split('-')
-result = 0
-if expression[0] != '':
-    result += sum(map(int, (expression[0].split('+'))))
+chunk = []
+for xp in expression:
+    chunk.append(sum(map(int, xp.split('+'))))
 
-for i in expression[1:]:
-    result -= sum(map(int, (i.split('+'))))
-
-print(result)
+print(sum(chunk[1:]) * -1 + chunk[0])
