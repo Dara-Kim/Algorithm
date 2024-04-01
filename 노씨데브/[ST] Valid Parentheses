@@ -1,0 +1,23 @@
+'''
+괄호들을 포함하고 있는 문자열 a가 주어질 때, 괄호가 유효한지 아닌지 판단하시오.
+
+제약조건
+1. 1 <= s.length <= 10^4
+2. 문자열 s는 (){}[]의 괄호들로만 구성되어 있다.
+
+'''
+
+def parentheses(s):
+    return None
+
+s = ")("
+print(parentheses(s))
+# output = false
+
+s = "([]}"
+print(parentheses(s))
+# output = false
+
+s = "{()[]}"
+print(parentheses(s))
+# output = true
